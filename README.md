@@ -180,14 +180,7 @@ $ sudo apt autoremove
 
 ## Dotfiles
 
-Dotfiles are setup automatically from a [Github repository](https://github.com/jcp/dotfiles).
-
-```bash
-$ git clone git@github.com:jcp/dotfiles.git
-$ cd dotfiles
-$ chmod +x setup.sh
-$ ./setup.sh
-```
+Use the [Dotfiles repository](https://github.com/jcp/dotfiles) instructions.
 
 ## Theme
 
