@@ -212,7 +212,14 @@ $ sudo apt-get install dconf-cli uuid-runtime
 $ bash -c  "$(wget -qO- https://git.io/vQgMr)"
 ```
 
-## ZSH and Oh My ZSH
+Install Powerline Fonts
+
+```bash
+sudo apt install fonts-powerline
+```
+
+
+## ZSH, Oh My ZSH
 
 ### ZSH
 
@@ -227,8 +234,6 @@ Before installing, see [Dotfiles](#dotfiles).
 ```bash
 $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
-
-#### Install plugins
 
 Install two custom plugins: `zsh-autosuggestions` and `zsh-syntax-highlighting`.
 
