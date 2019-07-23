@@ -228,6 +228,15 @@ Before installing, see [Dotfiles](#dotfiles).
 $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
+#### Install plugins
+
+Install two custom plugins: `zsh-autosuggestions` and `zsh-syntax-highlighting`.
+
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
 ## SSH Keys
 
 Generate SSH keys.
@@ -338,6 +347,13 @@ $ sudo snap install --classic code
 ```
 
 # Commands
+
+Dump and load `dconf`.
+
+```bash
+$ dconf dump / > .dconf
+$ dconf load / < .dconf
+```
 
 List installed packages.
 
