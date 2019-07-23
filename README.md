@@ -1,0 +1,376 @@
+# Table of Contents
+
+- [Dual Boot Windows 10 / Ubuntu 19.04](#dual-boot-windows-10--ubuntu-1904)
+	- [Windows](#windows)
+	- [Ubuntu](#ubuntu)
+
+- [Ubuntu Configuration](#ubuntu-configuration)
+	- [Initial](#initial)
+	- [Dotfiles](#dotfiles)
+	- [Theme](#theme)
+	- [ZSH and Oh My ZSH](#zsh-and-oh-my-zsh)
+	- [SSH Keys](#ssh-keys)
+	- [Git](#git)
+	- [Pyenv, Python and Pipenv](#pyenv-python-and-pipenv)
+	- [Essential Applications](#essential-applications)
+
+- [Commands](#commands)
+
+- [Shortcuts](#shortcuts)
+	- [Keyboard](#keyboard)
+	- [Visual Studio Code](#visual-studio-code)
+
+# Dual Boot Windows 10 / Ubuntu 19.04
+
+## Windows
+
+### Create a Backup
+
+* Hit <kbd>⊞ win</kbd> + <kbd>r</kbd>.
+* Enter `control` and hit <kbd>enter</kbd>.
+* Select **Backup and Restore (Windows 7)**.
+* Select **Create a system image** and follow steps.
+
+### Disable Fast Startup
+
+* Hit <kbd>⊞ win</kbd> + <kbd>r</kbd>.
+* Enter `control` and hit <kbd>enter</kbd>.
+* Select **Hardware and Sound**.
+* Select **Change what the power buttons do** under **Power Options**.
+* Uncheck **Turn on fast startup (recommended)**.
+* Hit <kbd>enter</kbd>.
+
+### Disable Secure Boot
+
+* Hold <kbd>shift</kbd> and restart.
+* Select **Troubleshoot** > **Advanced options** > **UEFI Firmware Settings** > **Restart**
+* Once in UEFI, select **Security** > **Secure Boot** and set **Secure Boot Support** to **Disabled**.
+* Save to restart.
+
+> **Note**
+>
+> UEFI interface may differ based on vendor specifications.
+
+### Shrink Partition
+
+* Hit <kbd>⊞ win</kbd> + <kbd>r</kbd>.
+* Enter `diskmgmt.msc` and hit <kbd>enter</kbd>.
+* Right click a volume and select **Shrink Volume...**
+* Enter the amount of space to shrink and hit <kbd>enter</kbd>.
+
+### Create Installer
+
+For this step, a 4GB+ USB flash drive is required.
+
+* Download latest version of [Ubuntu Desktop](https://ubuntu.com/download/desktop).
+* Download [Rufus](https://rufus.ie/) to create a bootable USB drive.
+* Insert USB flash drive and open **Rufus**.
+* Hold <kbd>f11</kbd> and restart. This will boot Ubuntu from the USB drive.
+
+> **Note**
+> 
+> Shortcut to boot from USB drive may differ based on vendor specifications.
+
+## Ubuntu
+
+### Install Ubuntu
+
+* From the GRUB screen, select **Install Ubuntu**.
+* Proceed through the installation process.
+* On the **Updates and other software** screen, check **Normal installation**, uncheck all other options and select **Continue**.
+* On the **Installation type** screen, select **Something else** and select **Continue**.
+* On the partition screen, follow the [partition space allocation](#partition-space-allocation) steps below to allocate space for `root`, `home` and `swap`.
+* Once the partitions have been created, select **Install Now** and then select **Continue**.
+* Proceed through the remaining installation steps. When finished, Ubuntu will restart. If the computer boots directly to Windows, see [changing boot order](#changing-boot-order) below.
+
+#### Partition Space Allocation
+
+For each partition, select the **free space** partition and select the **+** sign.
+
+* `root`: Allocate 20GB of space and set **Mount point** to `/`.
+* `swap`: Allocate 32GB of space and set **Use as** to `swap area`.
+* `home`: Allocate the remaining space and set **Mount point** to `/home`.
+
+> **Note**
+>
+> * See Ubuntu's [SwapFaq](https://help.ubuntu.com/community/SwapFaq) guide for more information on **swap** space allocation.
+
+#### Changing Boot Order
+
+* Hold <kbd>shift</kbd> and restart.
+* Select **Troubleshoot** > **Advanced options** > **UEFI Firmware Settings** > **Restart**
+* Once in UEFI, find the boot order settings and give Ubuntu priority.
+* Save and restart.
+
+> **Note**
+>
+> * Boot order settings may differ based on vendor specifications.
+
+# Ubuntu Configuration
+
+## Initial
+
+### Remove Unwanted Packages, Upgrade and Update
+
+Launch the **Terminal** and view installed packages.
+
+```bash
+$ sudo apt list --installed
+```
+
+Remove unwanted packages.
+
+```bash
+$ sudo apt remove [package] [package] ...
+```
+
+Update and upgrade packages.
+
+```bash
+$ sudo apt update && sudo apt upgrade
+```
+
+### Install Restricted Extras
+
+Due to copyright reasons, many of these [essential packages](https://en.wikipedia.org/wiki/Ubuntu-restricted-extras) are excluded from Ubuntu's default installation.
+
+```bash
+$ sudo apt install ubuntu-restricted-extras
+```
+
+### Install drivers
+
+Check to see what drivers exists.
+
+```bash
+$ sudo ubuntu-drivers devices
+```
+
+Install any missing or recommended drivers.
+
+```bash
+$ sudo apt install nvidia-driver-418
+```
+
+Ensure that the new drive is installed and selected.
+
+```bash
+$ prime-select query
+nvidia
+```
+
+> **Notes**
+>
+> * If PRIME doesn't exist, restart computer and try again.
+> * See `prime-select --help` for option on switching between drivers.
+
+### Install Build Essentials
+
+```bash
+$ sudo apt install -y build-essential curl git libbz2-dev libffi-dev liblzma-dev libncurses5-dev libncursesw5-dev libreadline-dev libsqlite3-dev libssl-dev llvm make python-openssl tk-dev vim wget xz-utils zlib1g-dev 
+```
+
+### Cleanup
+
+Remove  unused packages.
+
+```bash
+$ sudo apt autoremove
+```
+
+## Dotfiles
+
+Dotfiles are setup automatically from a [Github repository](https://github.com/jcp/dotfiles).
+
+```bash
+$ git clone git@github.com:jcp/dotfiles.git
+$ cd dotfiles
+$ chmod +x setup.sh
+$ ./setup.sh
+```
+
+## Theme
+
+Install [Tweaks](https://wiki.gnome.org/Apps/Tweaks).
+
+```bash
+$ sudo apt install gnome-tweak-tool
+```
+
+Load [dconf](https://wiki.gnome.org/action/show/Projects/dconf) settings.
+
+```bash
+$ dconf load / < https://raw.githubusercontent.com/jcp/notes/master/files/settings.dconf
+```
+
+### Terminal
+
+Use [Gogh](https://github.com/Mayccoll/Gogh) to install the **Tomorrow Night** theme for the **Terminal**.
+
+```bash
+$ sudo apt-get install dconf-cli uuid-runtime
+$ bash -c  "$(wget -qO- https://git.io/vQgMr)"
+```
+
+## ZSH and Oh My ZSH
+
+### ZSH
+
+```bash
+$ sudo apt install zsh
+```
+
+### Oh My ZSH
+
+Before installing, see [Dotfiles](#dotfiles).
+
+```bash
+$ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+## SSH Keys
+
+Generate SSH keys.
+
+```bash
+$ ssh-keygen -t rsa -b 4096 -C "me@jcp.io"
+```
+
+Add to ssh-agent
+
+```bash
+$ eval "$(ssh-agent -s)"
+$ ssh-add ~/.ssh/id_rsa
+```
+
+## Git
+
+Before installing, see [Dotfiles](#dotfiles).
+
+```bash
+$ sudo apt install git
+```
+
+Add `id_rsa.pub` to [Github](https://github.com/settings/keys).
+
+```bash
+$ cat ~/.ssh/id_rsa.pub
+```
+
+## Pyenv, Python and Pipenv
+
+Before installing, see [Dotfiles](#dotfiles).
+
+### Pyenv
+
+```bash
+$ curl https://pyenv.run | bash
+$ source ~/.zshrc
+```
+
+### Python
+
+```bash
+$ pyenv install -v 3.6.9
+$ pyenv install -v 3.7.4
+$ pyenv install -v 3.8-dev
+```
+
+Set desired version of Python.
+
+```bash
+$ pyenv global 3.7.4
+```
+
+### Pipenv
+
+```bash
+$ sudo apt install software-properties-common python-software-properties
+$ sudo add-apt-repository ppa:pypa/ppa
+$ sudo apt update
+$ sudo apt install pipenv
+```
+
+## Essential Applications
+
+**Chrome**
+
+[Installation guide](https://www.google.com/chrome/)
+
+**Discord**
+
+```bash
+$ sudo snap install discord
+```
+
+**Dropbox**
+
+[Installation guide](https://www.dropbox.com/install-linux)
+
+**Slack**
+
+```bash
+$ sudo snap install slack --classic
+$ sudo apt update 
+$ sudo apt upgrade slack-desktop
+```
+
+**TrueCrypt**
+
+```bash
+$ sudo add-apt-repository ppa:stefansundin/truecrypt
+$ sudo apt-get update
+$ sudo apt-get install truecrypt
+```
+
+**Typora**
+
+```bash
+$ wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+$ sudo add-apt-repository 'deb https://typora.io/linux ./'
+$ sudo apt install typora
+```
+
+**Visual Studio Code**
+
+```bash
+$ sudo snap install --classic code
+```
+
+# Commands
+
+List installed packages.
+
+```bash
+$ apt list --installed
+```
+
+Switch drivers.
+
+```bash
+$ sudo prime-select query
+$ sudo prime-select intel
+$ sudo prime-select nvidia
+```
+
+# Shortcuts
+
+## Keyboard
+
+| Shortcut | Description |
+| -------- | ----------- |
+| <kbd>alt</kbd> + <kbd>1</kbd> | Maximize application |
+| <kbd>alt</kbd> + <kbd>2</kbd> | Move application to split screen, left side |
+| <kbd>alt</kbd> + <kbd>3</kbd> | Move applicatoin to split screen, right side |
+
+## Visual Studio Code
+
+| Shortcut | Description |
+| -------- | ----------- |
+| <kbd>shift</kbd> + <kbd>alt</kbd> + <kbd>i</kbd> | Multi line cursor at end of selection |
+| <kbd>shift</kbd> + <kbd>alt</kbd> + <kbd>down</kbd> | Multi line cursor (down) |
+| <kbd>shift</kbd> + <kbd>alt</kbd> + <kbd>up</kbd> | Multi line cursor (up) |
+
+> **Note**
+>
+> For more, see https://code.visualstudio.com/Docs/editor/codebasics.
