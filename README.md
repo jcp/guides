@@ -182,6 +182,10 @@ $ sudo apt autoremove
 
 Use the [Dotfiles repository](https://github.com/jcp/dotfiles) instructions.
 
+> **Note**
+>
+> These dotfiles contain configurations for certain packages within this repository.
+
 ## Theme
 
 Install [Tweaks](https://wiki.gnome.org/Apps/Tweaks).
@@ -303,10 +307,19 @@ $ sudo apt install pipenv
 ## Docker
 
 ```bash
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable edge"
-sudo apt update
-sudo apt install -y docker-ce
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable edge"
+$ sudo apt update
+$ sudo apt install -y docker-ce
+```
+
+## NVM and Node.js
+
+Before installing, see [Dotfiles](#dotfiles).
+
+```bash
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+$ nvm install node
 ```
 
 ## Essential Applications
