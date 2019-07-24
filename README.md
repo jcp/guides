@@ -1,24 +1,26 @@
 # Table of Contents
 
-- [Dual Boot Windows 10 / Ubuntu 19.04](#dual-boot-windows-10--ubuntu-1904)
-	- [Windows](#windows)
-	- [Ubuntu](#ubuntu)
+* [Dual Boot Windows 10 / Ubuntu 19.04](#dual-boot-windows-10--ubuntu-1904)
+	* [Windows](#windows)
+	* [Ubuntu](#ubuntu)
 
-- [Ubuntu Configuration](#ubuntu-configuration)
-	- [Initial](#initial)
-	- [Dotfiles](#dotfiles)
-	- [Theme](#theme)
-	- [ZSH and Oh My ZSH](#zsh-and-oh-my-zsh)
-	- [SSH Keys](#ssh-keys)
-	- [Git](#git)
-	- [Pyenv, Python and Pipenv](#pyenv-python-and-pipenv)
-	- [Essential Applications](#essential-applications)
+* [Ubuntu Configuration](#ubuntu-configuration)
+	* [Initial](#initial)
+	* [Dotfiles](#dotfiles)
+	* [Theme](#theme)
+	* [ZSH and Oh My ZSH](#zsh-and-oh-my-zsh)
+	* [SSH Keys](#ssh-keys)
+	* [Git](#git)
+	* [Pyenv, Python and Pipenv](#pyenv-python-and-pipenv)
+	* [Docker](#docker)
+	* [NVM and Node.js](#nvm-and-nodejs)
+	* [Essential Applications](#essential-applications)
 
-- [Commands](#commands)
+* [Commands](#commands)
 
-- [Shortcuts](#shortcuts)
-	- [Keyboard](#keyboard)
-	- [Visual Studio Code](#visual-studio-code)
+* [Shortcuts](#shortcuts)
+	* [Keyboard](#keyboard)
+	* [Visual Studio Code](#visual-studio-code)
 
 # Dual Boot Windows 10 / Ubuntu 19.04
 
