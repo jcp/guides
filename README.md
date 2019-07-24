@@ -209,28 +209,27 @@ $ rm .dconf
 Use [Gogh](https://github.com/Mayccoll/Gogh) to install the **Tomorrow Night** theme for the **Terminal**.
 
 ```bash
-$ sudo apt-get install dconf-cli uuid-runtime
+$ sudo apt install dconf-cli uuid-runtime
 $ bash -c  "$(wget -qO- https://git.io/vQgMr)"
 ```
 
 Install Powerline Fonts
 
 ```bash
-sudo apt install fonts-powerline
+$ sudo apt install fonts-powerline
 ```
 
+### ZSH and Oh My ZSH
 
-## ZSH, Oh My ZSH
+Before installing, see [Dotfiles](#dotfiles).
 
-### ZSH
+#### ZSH
 
 ```bash
 $ sudo apt install zsh
 ```
 
-### Oh My ZSH
-
-Before installing, see [Dotfiles](#dotfiles).
+#### Oh My ZSH
 
 ```bash
 $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -239,8 +238,8 @@ $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools
 Install two custom plugins: `zsh-autosuggestions` and `zsh-syntax-highlighting`.
 
 ```bash
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+$ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+$ git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
 ## SSH Keys
@@ -258,7 +257,41 @@ $ eval "$(ssh-agent -s)"
 $ ssh-add ~/.ssh/id_rsa
 ```
 
-## Git
+## Essential Applications
+
+### Chrome
+
+[Installation guide](https://www.google.com/chrome/)
+
+### Discord
+
+```bash
+$ sudo snap install discord
+```
+
+### Docker
+
+```bash
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable edge"
+$ sudo apt update
+$ sudo apt install -y docker-ce
+```
+
+### Dropbox
+
+[Installation guide](https://www.dropbox.com/install-linux)
+
+### Gazebo
+
+```bash
+$ sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
+$ wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
+$ sudo apt update
+$ sudo apt install gazebo9
+```
+
+### Git
 
 Before installing, see [Dotfiles](#dotfiles).
 
@@ -272,18 +305,27 @@ Add `id_rsa.pub` to [Github](https://github.com/settings/keys).
 $ cat ~/.ssh/id_rsa.pub
 ```
 
-## Pyenv, Python and Pipenv
+### NVM and Node.js
 
 Before installing, see [Dotfiles](#dotfiles).
 
-### Pyenv
+```bash
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+$ nvm install node
+```
+
+### Pyenv, Python and Pipenv
+
+Before installing, see [Dotfiles](#dotfiles).
+
+#### Pyenv
 
 ```bash
 $ curl https://pyenv.run | bash
 $ source ~/.zshrc
 ```
 
-### Python
+#### Python
 
 ```bash
 $ pyenv install -v 3.6.9
@@ -297,7 +339,7 @@ Set desired version of Python.
 $ pyenv global 3.7.4
 ```
 
-### Pipenv
+#### Pipenv
 
 ```bash
 $ sudo apt install software-properties-common python-software-properties
@@ -306,41 +348,7 @@ $ sudo apt update
 $ sudo apt install pipenv
 ```
 
-## Docker
-
-```bash
-$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable edge"
-$ sudo apt update
-$ sudo apt install -y docker-ce
-```
-
-## NVM and Node.js
-
-Before installing, see [Dotfiles](#dotfiles).
-
-```bash
-$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-$ nvm install node
-```
-
-## Essential Applications
-
-**Chrome**
-
-[Installation guide](https://www.google.com/chrome/)
-
-**Discord**
-
-```bash
-$ sudo snap install discord
-```
-
-**Dropbox**
-
-[Installation guide](https://www.dropbox.com/install-linux)
-
-**Slack**
+### Slack
 
 ```bash
 $ sudo snap install slack --classic
@@ -348,15 +356,15 @@ $ sudo apt update
 $ sudo apt upgrade slack-desktop
 ```
 
-**TrueCrypt**
+### TrueCrypt
 
 ```bash
 $ sudo add-apt-repository ppa:stefansundin/truecrypt
-$ sudo apt-get update
-$ sudo apt-get install truecrypt
+$ sudo apt update
+$ sudo apt install truecrypt
 ```
 
-**Typora**
+### Typora
 
 ```bash
 $ wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
@@ -364,7 +372,7 @@ $ sudo add-apt-repository 'deb https://typora.io/linux ./'
 $ sudo apt install typora
 ```
 
-**Visual Studio Code**
+### Visual Studio Code
 
 ```bash
 $ sudo snap install --classic code
