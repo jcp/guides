@@ -8,13 +8,8 @@
 	* [Initial](#initial)
 	* [Dotfiles](#dotfiles)
 	* [Theme](#theme)
-	* [ZSH and Oh My ZSH](#zsh-and-oh-my-zsh)
 	* [SSH Keys](#ssh-keys)
-	* [Git](#git)
-	* [Pyenv, Python and Pipenv](#pyenv-python-and-pipenv)
-	* [Docker](#docker)
-	* [NVM and Node.js](#nvm-and-nodejs)
-	* [Essential Applications](#essential-applications)
+	* [Essential Packages](#essential-packages)
 
 * [Commands](#commands)
 
@@ -257,7 +252,7 @@ $ eval "$(ssh-agent -s)"
 $ ssh-add ~/.ssh/id_rsa
 ```
 
-## Essential Applications
+## Essential Packages
 
 ### Chrome
 
