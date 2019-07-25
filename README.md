@@ -312,6 +312,12 @@ $ cat ~/.ssh/id_rsa.pub
 sudo apt install gnome-sushi
 ```
 
+### Inkscape
+
+```bash
+sudo snap install inkscape
+```
+
 ### NVM and Node.js
 
 Before installing, see [Dotfiles](#dotfiles).
