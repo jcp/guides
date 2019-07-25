@@ -300,6 +300,12 @@ Add `id_rsa.pub` to [Github](https://github.com/settings/keys).
 $ cat ~/.ssh/id_rsa.pub
 ```
 
+### Gnome Sushi
+
+```bash
+sudo apt install gnome-sushi
+```
+
 ### NVM and Node.js
 
 Before installing, see [Dotfiles](#dotfiles).
