@@ -254,6 +254,12 @@ $ ssh-add ~/.ssh/id_rsa
 
 ## Essential Packages
 
+### Blender
+
+```bash
+sudo snap install blender --classic
+```
+
 ### Chrome
 
 [Installation guide](https://www.google.com/chrome/)
