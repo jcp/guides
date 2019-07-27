@@ -369,6 +369,12 @@ $ sudo apt update
 $ sudo apt upgrade slack-desktop
 ```
 
+### Spotify
+
+```bash
+$ sudo snap install spotify
+```
+
 ### TrueCrypt
 
 ```bash
