@@ -257,7 +257,7 @@ $ ssh-add ~/.ssh/id_rsa
 ### Blender
 
 ```bash
-sudo snap install blender --classic
+$ sudo snap install blender --classic
 ```
 
 ### Chrome
@@ -309,14 +309,48 @@ $ cat ~/.ssh/id_rsa.pub
 ### Gnome Sushi
 
 ```bash
-sudo apt install gnome-sushi
+$ sudo apt install gnome-sushi
+```
+
+### Go
+
+Before installing, see [Dotfiles](#dotfiles).
+
+```
+$ sudo add-apt-repository ppa:longsleep/golang-backports
+$ sudo apt update
+$ sudo apt install golang-go
+$ sudo mv ~/go ~/.go
+```
+
+> **Note**
+>
+> Moving `go` to `.go` is a personal preference.
+
+### Gobuster
+
+```
+$ go get github.com/OJ/gobuster
+$ sudo ln -s ~/.go/bin/gobuster /usr/bin/gobuster
 ```
 
 ### Inkscape
 
 ```bash
-sudo snap install inkscape
+$ sudo snap install inkscape
 ```
+
+### Katoolin
+
+```bash
+$ git clone https://github.com/LionSec/katoolin.git
+$ sudo mv katoolin/katoolin.py /usr/bin/katoolin
+$ sudo chmod +x /usr/bin/katoolin
+$ sudo katoolin
+```
+
+Install `binwalk`, `netcat` and `nmap`.
+
 
 ### NVM and Node.js
 
