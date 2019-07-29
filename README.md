@@ -395,6 +395,13 @@ $ sudo apt update
 $ sudo apt install pipenv
 ```
 
+#### PostgreSQL
+
+```bash
+$ sudo apt update
+$ sudo apt install postgresql postgresql-contrib postgresql-client postgresql-client-common libpq-dev
+```
+
 ### Slack
 
 ```bash
@@ -452,6 +459,12 @@ Switch drivers.
 $ sudo prime-select query
 $ sudo prime-select intel
 $ sudo prime-select nvidia
+```
+
+Access PostgreSQL.
+
+```bash
+$ sudo -u postgres psql
 ```
 
 # Shortcuts
