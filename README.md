@@ -334,6 +334,12 @@ $ go get github.com/OJ/gobuster
 $ sudo ln -s ~/.go/bin/gobuster /usr/bin/gobuster
 ```
 
+### Heroku CLI
+
+```bash
+$ sudo snap install heroku --classic
+```
+
 ### Inkscape
 
 ```bash
@@ -435,7 +441,7 @@ $ sudo apt install typora
 ### Visual Studio Code
 
 ```bash
-$ sudo snap install --classic code
+$ sudo snap install code --classic
 ```
 
 # Commands
