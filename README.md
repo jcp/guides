@@ -367,6 +367,13 @@ $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bas
 $ nvm install node
 ```
 
+#### PostgreSQL
+
+```bash
+$ sudo apt update
+$ sudo apt install postgresql postgresql-contrib postgresql-client postgresql-client-common libpq-dev
+```
+
 ### Pyenv, Python and Pipenv
 
 Before installing, see [Dotfiles](#dotfiles).
@@ -399,13 +406,6 @@ $ sudo apt install software-properties-common python-software-properties
 $ sudo add-apt-repository ppa:pypa/ppa
 $ sudo apt update
 $ sudo apt install pipenv
-```
-
-#### PostgreSQL
-
-```bash
-$ sudo apt update
-$ sudo apt install postgresql postgresql-contrib postgresql-client postgresql-client-common libpq-dev
 ```
 
 ### Slack
