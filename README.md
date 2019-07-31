@@ -260,6 +260,12 @@ $ ssh-add ~/.ssh/id_rsa
 $ sudo snap install blender --classic
 ```
 
+### Cheese
+
+```bash
+$ sudo apt install cheese
+```
+
 ### Chrome
 
 [Installation guide](https://www.google.com/chrome/)
