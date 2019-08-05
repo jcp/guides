@@ -334,7 +334,7 @@ $ sudo apt install gnome-sushi
 
 Before installing, see [Dotfiles](#dotfiles).
 
-```
+```bash
 $ sudo add-apt-repository ppa:longsleep/golang-backports
 $ sudo apt update
 $ sudo apt install golang-go
@@ -347,9 +347,15 @@ $ sudo mv ~/go ~/.go
 
 ### Gobuster
 
-```
+```bash
 $ go get github.com/OJ/gobuster
 $ sudo ln -s ~/.go/bin/gobuster /usr/bin/gobuster
+```
+
+### Gpick
+
+```bash
+$ sudo apt install gpick
 ```
 
 ### Heroku CLI
