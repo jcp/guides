@@ -352,17 +352,11 @@ $ sudo snap install heroku --classic
 $ sudo snap install inkscape
 ```
 
-### Katoolin
+### NMAP
 
 ```bash
-$ git clone https://github.com/LionSec/katoolin.git
-$ sudo mv katoolin/katoolin.py /usr/bin/katoolin
-$ sudo chmod +x /usr/bin/katoolin
-$ sudo katoolin
+$ sudo apt install nmap
 ```
-
-Install `binwalk`, `netcat` and `nmap`.
-
 
 ### NVM and Node.js
 
@@ -408,7 +402,7 @@ $ pyenv global 3.7.4
 #### Pipenv
 
 ```bash
-$ sudo apt install software-properties-common python-software-properties
+$ sudo apt install software-properties-common
 $ sudo add-apt-repository ppa:pypa/ppa
 $ sudo apt update
 $ sudo apt install pipenv
