@@ -208,10 +208,16 @@ $ sudo apt install dconf-cli uuid-runtime
 $ bash -c  "$(wget -qO- https://git.io/vQgMr)"
 ```
 
-Install Powerline Fonts
+Install [Powerline Fonts](https://github.com/powerline/fonts).
 
 ```bash
 $ sudo apt install fonts-powerline
+```
+
+Install [exa](https://the.exa.website) replacement for `ls`.
+
+```bash
+$ sudo apt install exa
 ```
 
 ### ZSH and Oh My ZSH
@@ -235,6 +241,12 @@ Install two custom plugins: `zsh-autosuggestions` and `zsh-syntax-highlighting`.
 ```bash
 $ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 $ git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+Install Powerlevel9k theme.
+
+```bash
+$ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 ```
 
 ## SSH Keys
@@ -420,6 +432,14 @@ $ sudo apt upgrade slack-desktop
 
 ```bash
 $ sudo snap install spotify
+```
+
+### Tilix
+
+See, [Terminal](#terminal) to install the **Tomorrow Night** theme for Tilix.
+
+```bash
+$ sudo bash install tilix
 ```
 
 ### TrueCrypt
