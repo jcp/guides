@@ -301,6 +301,12 @@ $ sudo apt install -y docker-ce
 
 [Installation guide](https://www.dropbox.com/install-linux)
 
+### FileZilla
+
+```bash
+$ sudo apt install filezilla
+```
+
 ### Gazebo
 
 ```bash
