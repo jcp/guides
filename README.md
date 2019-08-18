@@ -376,6 +376,12 @@ $ sudo snap install heroku --classic
 $ sudo snap install inkscape
 ```
 
+### MongoDB
+
+```bash
+$ sudo apt install mongodb
+```
+
 ### NMAP
 
 ```bash
