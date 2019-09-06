@@ -370,12 +370,6 @@ $ sudo apt install gpick
 $ sudo snap install heroku --classic
 ```
 
-### Inkscape
-
-```bash
-$ sudo snap install inkscape
-```
-
 ### MongoDB
 
 ```bash
