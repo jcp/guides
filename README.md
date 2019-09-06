@@ -318,7 +318,7 @@ $ sudo apt install gazebo9
 
 ### Gimp
 
-```
+```bash
 $ sudo snap install gimp
 ```
 
@@ -368,6 +368,12 @@ $ sudo ln -s ~/.go/bin/gobuster /usr/bin/gobuster
 
 ```bash
 $ sudo apt install gpick
+```
+
+### gThumb
+
+```bash
+$ sudo apt install gthumb
 ```
 
 ### Heroku CLI
