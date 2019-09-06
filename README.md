@@ -316,6 +316,12 @@ $ sudo apt update
 $ sudo apt install gazebo9
 ```
 
+### Gimp
+
+```
+$ sudo snap install gimp
+```
+
 ### Git
 
 Before installing, see [Dotfiles](#dotfiles).
