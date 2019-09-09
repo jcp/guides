@@ -316,6 +316,13 @@ $ sudo apt update
 $ sudo apt install gazebo9
 ```
 
+### Gedit
+
+```bash
+$ line='\ \ <style name="cursor"                      foreground="black"/>'
+$ sudo sed -i "/name=\"selection\"/a ${line}" /usr/share/gtksourceview-4/styles/kate.xml
+```
+
 ### Gimp
 
 ```bash
