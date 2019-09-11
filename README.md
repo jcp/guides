@@ -282,6 +282,19 @@ $ sudo apt install cheese
 
 [Installation guide](https://www.google.com/chrome/)
 
+### Composer
+
+```bash
+$ sudo apt install php-cli
+$ curl https://getcomposer.org/installer -o composer-setup.php
+$ sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+$ rm composer-setup.php
+```
+
+> **Note**
+>
+> Prior to running `composer-setup.php`, verify installer's SHA-384. See, https://getcomposer.org/download/.
+
 ### Discord
 
 ```bash
