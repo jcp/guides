@@ -508,6 +508,22 @@ $ sudo apt install typora
 $ sudo snap install code --classic
 ```
 
+### WPE CLI
+
+```bash
+$ sudo apt-get update && sudo apt install -y curl gnupg2 apt-transport-https
+$ curl -o apt.wpengine.gpg https://s3.dualstack.us-east-1.amazonaws.com/apt.wpengine.net/apt.wpengine.gpg
+$ sudo gpg --with-fingerprint apt.wpengine.gpg
+$ sudo apt-key add apt.wpengine.gpg
+$ sudo apt-key fingerprint D4E181E8
+$ echo "deb http://apt.wpengine.net.s3-website-us-east-1.amazonaws.com all main" | sudo tee /etc/apt/sources.list.d/apt.wpengine.net.list
+$ sudo apt-get update && sudo apt install -y wpe-cli
+```
+
+> **Note**
+>
+> This is in beta. Prior to installation, review https://my.wpengine.com/products/devkit.
+
 # Commands
 
 Dump and load `dconf`.
