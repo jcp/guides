@@ -520,6 +520,12 @@ $ echo "deb http://apt.wpengine.net.s3-website-us-east-1.amazonaws.com all main"
 $ sudo apt-get update && sudo apt install -y wpe-cli
 ```
 
+### Virtual Box
+
+```bash
+$ sudo apt install virtualbox
+```
+
 > **Note**
 >
 > This is in beta. Prior to installation, review https://my.wpengine.com/products/devkit.
