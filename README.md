@@ -146,14 +146,13 @@ $ sudo ubuntu-drivers devices
 Install any missing or recommended drivers.
 
 ```bash
-$ sudo apt install nvidia-driver-418
+$ sudo apt install [package]
 ```
 
 Ensure that the new drive is installed and selected.
 
 ```bash
 $ prime-select query
-nvidia
 ```
 
 > **Notes**
