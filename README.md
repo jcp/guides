@@ -389,6 +389,12 @@ $ sudo apt update
 $ sudo apt install pipenv
 ```
 
+#### Rust
+
+```bash
+curl https://sh.rustup.rs -sSf | sh
+````
+
 ### Slack
 
 ```bash
@@ -455,20 +461,6 @@ $ sudo apt install virtualbox
 
 ## Theme
 
-Install [Tweaks](https://wiki.gnome.org/Apps/Tweaks).
-
-```bash
-$ sudo apt install gnome-tweak-tool
-```
-
-Load [dconf](https://wiki.gnome.org/action/show/Projects/dconf) settings.
-
-```bash
-$ curl https://raw.githubusercontent.com/jcp/dotfiles/master/.dconf -o .dconf
-$ dconf load / < .dconf
-$ rm .dconf
-```
-
 ### Terminal
 
 Use [Gogh](https://github.com/Mayccoll/Gogh) to install the **Tomorrow Night** theme for the **Terminal**.
@@ -487,7 +479,7 @@ $ sudo apt install fonts-powerline
 Install [exa](https://the.exa.website) replacement for `ls`.
 
 ```bash
-$ sudo apt install exa
+$ cargo install exa
 ```
 
 Install [Nerd Fonts](https://www.nerdfonts.com/font-downloads).
@@ -523,6 +515,20 @@ Install Powerlevel10k theme.
 
 ```bash
 $ git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+```
+
+### Tweaks
+
+```bash
+$ sudo apt install gnome-tweak-tool
+```
+
+### Load dconf
+
+```bash
+$ curl https://raw.githubusercontent.com/jcp/dotfiles/master/.dconf -o .dconf
+$ dconf load / < .dconf
+$ rm .dconf
 ```
 
 ## Dotfiles
