@@ -503,9 +503,8 @@ $ sudo apt install typora
 
 ### Visual Studio Code
 
-```bash
-$ sudo snap install code --classic
-```
+[Installation guide](https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions)
+
 
 ### WPE CLI
 
