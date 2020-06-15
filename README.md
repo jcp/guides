@@ -6,10 +6,10 @@
 
 * [Ubuntu Configuration](#ubuntu-configuration)
 	* [Initial](#initial)
-	* [Dotfiles](#dotfiles)
-	* [Theme](#theme)
 	* [SSH Keys](#ssh-keys)
 	* [Essential Packages](#essential-packages)
+	* [Theme](#theme)
+	* [Dotfiles](#dotfiles)
 
 * [Commands](#commands)
 
@@ -172,86 +172,6 @@ Remove  unused packages.
 
 ```bash
 $ sudo apt autoremove
-```
-
-## Dotfiles
-
-Use the [Dotfiles repository](https://github.com/jcp/dotfiles) instructions.
-
-> **Note**
->
-> These dotfiles contain configurations for certain packages within this repository. Install packages before installing dotfiles.
-
-## Theme
-
-Install [Tweaks](https://wiki.gnome.org/Apps/Tweaks).
-
-```bash
-$ sudo apt install gnome-tweak-tool
-```
-
-Load [dconf](https://wiki.gnome.org/action/show/Projects/dconf) settings.
-
-```bash
-$ curl https://raw.githubusercontent.com/jcp/dotfiles/master/.dconf -o .dconf
-$ dconf load / < .dconf
-$ rm .dconf
-```
-
-### Terminal
-
-Use [Gogh](https://github.com/Mayccoll/Gogh) to install the **Tomorrow Night** theme for the **Terminal**.
-
-```bash
-$ sudo apt install dconf-cli uuid-runtime
-$ bash -c  "$(wget -qO- https://git.io/vQgMr)"
-```
-
-Install [Powerline Fonts](https://github.com/powerline/fonts).
-
-```bash
-$ sudo apt install fonts-powerline
-```
-
-Install [exa](https://the.exa.website) replacement for `ls`.
-
-```bash
-$ sudo apt install exa
-```
-
-Install [Nerd Fonts](https://www.nerdfonts.com/font-downloads).
-
-> **Note**
->
-> Download and install **Hack Nerd Font**.
-
-### ZSH and Oh My ZSH
-
-Before installing, see [Dotfiles](#dotfiles).
-
-#### ZSH
-
-```bash
-$ sudo apt install zsh
-```
-
-#### Oh My ZSH
-
-```bash
-$ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
-
-Install two custom plugins: `zsh-autosuggestions` and `zsh-syntax-highlighting`.
-
-```bash
-$ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-$ git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-```
-
-Install Powerlevel10k theme.
-
-```bash
-$ git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 ```
 
 ## SSH Keys
@@ -532,6 +452,86 @@ $ sudo apt install virtualbox
 > **Note**
 >
 > This is in beta. Prior to installation, review https://my.wpengine.com/products/devkit.
+
+## Theme
+
+Install [Tweaks](https://wiki.gnome.org/Apps/Tweaks).
+
+```bash
+$ sudo apt install gnome-tweak-tool
+```
+
+Load [dconf](https://wiki.gnome.org/action/show/Projects/dconf) settings.
+
+```bash
+$ curl https://raw.githubusercontent.com/jcp/dotfiles/master/.dconf -o .dconf
+$ dconf load / < .dconf
+$ rm .dconf
+```
+
+### Terminal
+
+Use [Gogh](https://github.com/Mayccoll/Gogh) to install the **Tomorrow Night** theme for the **Terminal**.
+
+```bash
+$ sudo apt install dconf-cli uuid-runtime
+$ bash -c  "$(wget -qO- https://git.io/vQgMr)"
+```
+
+Install [Powerline Fonts](https://github.com/powerline/fonts).
+
+```bash
+$ sudo apt install fonts-powerline
+```
+
+Install [exa](https://the.exa.website) replacement for `ls`.
+
+```bash
+$ sudo apt install exa
+```
+
+Install [Nerd Fonts](https://www.nerdfonts.com/font-downloads).
+
+> **Note**
+>
+> Download and install **Hack Nerd Font**.
+
+### ZSH and Oh My ZSH
+
+Before installing, see [Dotfiles](#dotfiles).
+
+#### ZSH
+
+```bash
+$ sudo apt install zsh
+```
+
+#### Oh My ZSH
+
+```bash
+$ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+Install two custom plugins: `zsh-autosuggestions` and `zsh-syntax-highlighting`.
+
+```bash
+$ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+$ git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+Install Powerlevel10k theme.
+
+```bash
+$ git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+```
+
+## Dotfiles
+
+Use the [Dotfiles repository](https://github.com/jcp/dotfiles) instructions.
+
+> **Note**
+>
+> These dotfiles contain configurations for certain packages within this repository. Install packages before installing dotfiles.
 
 # Commands
 
