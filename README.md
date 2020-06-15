@@ -443,8 +443,8 @@ $ source ~/.zshrc
 #### Python
 
 ```bash
-$ pyenv install -v 3.6.9
-$ pyenv install -v 3.7.4
+$ pyenv install -v 3.6-dev
+$ pyenv install -v 3.7-dev
 $ pyenv install -v 3.8-dev
 ```
 
