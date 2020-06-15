@@ -219,6 +219,12 @@ Install [exa](https://the.exa.website) replacement for `ls`.
 $ sudo apt install exa
 ```
 
+Install [Nerd Fonts](https://www.nerdfonts.com/font-downloads).
+
+> **Note**
+>
+> Download and install **Hack Nerd Font**.
+
 ### ZSH and Oh My ZSH
 
 Before installing, see [Dotfiles](#dotfiles).
@@ -504,7 +510,6 @@ $ sudo apt install typora
 ### Visual Studio Code
 
 [Installation guide](https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions)
-
 
 ### WPE CLI
 
