@@ -193,7 +193,7 @@ $ sudo apt install gnome-tweak-tool
 Load [dconf](https://wiki.gnome.org/action/show/Projects/dconf) settings.
 
 ```bash
-$ curl https://raw.githubusercontent.com/jcp/dotfiles/master/.dconf
+$ curl https://raw.githubusercontent.com/jcp/dotfiles/master/.dconf -o .dconf
 $ dconf load / < .dconf
 $ rm .dconf
 ```
