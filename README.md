@@ -451,7 +451,7 @@ $ pyenv install -v 3.8-dev
 Set desired version of Python.
 
 ```bash
-$ pyenv global 3.7.4
+$ pyenv global 3.8-dev
 ```
 
 #### Pipenv
