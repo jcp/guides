@@ -180,7 +180,7 @@ Use the [Dotfiles repository](https://github.com/jcp/dotfiles) instructions.
 
 > **Note**
 >
-> These dotfiles contain configurations for certain packages within this repository.
+> These dotfiles contain configurations for certain packages within this repository. Install packages before installing dotfiles.
 
 ## Theme
 
