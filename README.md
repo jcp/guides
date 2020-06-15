@@ -482,7 +482,7 @@ $ sudo snap install spotify
 See, [Terminal](#terminal) to install the **Tomorrow Night** theme for Tilix.
 
 ```bash
-$ sudo bash install tilix
+$ sudo apt install tilix
 ```
 
 ### TrueCrypt
