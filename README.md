@@ -86,6 +86,12 @@ See [installation guide](https://www.dropbox.com/install-linux).
 sudo apt install filezilla
 ```
 
+### Git
+
+```bash
+sudo apt install git
+```
+
 ### Obsidian
 
 See [installation guide](https://obsidian.md/download).
