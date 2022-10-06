@@ -4,6 +4,7 @@
 	* [initial](#initial)
 	* [Applications](#applications)
 	* [Dotfiles](#dotfiles)
+	* [Desktop](#desktop)
 	* [Terminal](#terminal)
 	* [Development](#development)
 
@@ -126,6 +127,20 @@ See [Dotfiles repository](https://github.com/jcp/dotfiles) for installation inst
 >
 > These dotfiles contain configurations for certain [applications](#applications) within this repository. Install all [applications](#applications) before installing dotfiles.
 
+## Desktop
+
+Move **Applications** icon to the top of the **Dock**.
+
+```bash
+gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
+```
+
+Show **Trash** icon on Desktop.
+
+```bash
+gsettings set org.gnome.shell.extensions.ding show-trash true
+```
+
 ## Terminal
 
 Install [Tilix](https://gnunn1.github.io/tilix-web/), a tiling terminal emulator.
@@ -146,7 +161,7 @@ Install [Zsh](https://www.zsh.org/), a **Bash** replacement shell.
 sudo apt install zsh
 ```
 
-Install [Oh My ZSH], an open source **Zsh** configuration manager framework.
+Install [Oh My Zsh], an open source **Zsh** configuration manager framework.
 
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
