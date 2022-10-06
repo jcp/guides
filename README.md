@@ -62,6 +62,10 @@ sudo pro attach [token]
 
 ## Applications
 
+### 1Password
+
+See [installation guide](https://1password.com/downloads/linux/).
+
 ### Chrome
 
 See [installation guide](https://www.google.com/chrome/).
