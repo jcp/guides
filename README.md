@@ -218,7 +218,7 @@ Install [Pip](https://pypi.org/project/pip/), a Python package installer.
 sudo apt install python3-pip
 ```
 
-Install [venv], a virtual environment creation tool.
+Install [venv](https://docs.python.org/3/library/venv.html), a virtual environment creation tool.
 
 ```bash
 sudo apt install python3-venv
