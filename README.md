@@ -161,7 +161,7 @@ Install [Zsh](https://www.zsh.org/), a **Bash** replacement shell.
 sudo apt install zsh
 ```
 
-Install [Oh My Zsh], an open source **Zsh** configuration manager framework.
+Install [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh), an open source **Zsh** configuration manager framework.
 
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -180,13 +180,15 @@ Install [Powerline](https://github.com/powerline/fonts) fonts.
 
 ```bash
 sudo apt install fonts-powerline
+fc-cache -f -v
 ```
 
-Install [JetBrains Mono](https://www.jetbrains.com/lp/mono/#how-to-install) fonts.
+Install [JetBrains Mono Nerd](https://github.com/ryanoasis/nerd-fonts/releases) fonts.
 
 ```bash
-sudo mkdir /usr/share/fonts/truetype/jetbrains-mono
-# Unpack font files...
+wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
+sudo unzip JetBrainsMono.zip -d /usr/share/fonts/jetbrains-mono
+rm JetBrainsMono.zip
 fc-cache -f -v
 ```
 
@@ -202,7 +204,7 @@ Install [Powerlevel10k](https://github.com/romkatv/powerlevel10k) theme.
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 ```
 
-Install **Tomorrow Night** theme with [Gogh](https://gogh-co.github.io/Gogh/).
+Install **Tomorrow Night Bright** theme with [Gogh](https://gogh-co.github.io/Gogh/).
 
 ```bash
 sudo apt install dconf-cli uuid-runtime
